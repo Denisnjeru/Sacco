@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>TUMAINI SACCO</title>
+
+<meta charset="iso-8859-1">
+{% load static %}
+<link rel="icon" type="image/png" href="{% static 'Tumainibase/favicon-32x32.png' %}" sizes="32x32" />
+<link rel="icon" type="image/png" href="{% static 'Tumainibase/favicon-16x16.png' %}" sizes="16x16" /> 
+<link rel="stylesheet" href="{% static 'Tumainibase/layout/styles/layout.css' %}" type="text/css">
+<script type="text/javascript" src="{% static 'Tumainibase/layout/scripts/jquery.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'Tumainibase/layout/scripts/jquery-defaultvalue.js' %}"></script>
+<!-- homepage slider scripts -->
+<link rel="stylesheet" href="{% static 'Tumainibase/layout/scripts/supersized/supersized.css' %}" type="text/css">
+<link rel="stylesheet" href="{% static 'Tumainibase/layout/scripts/supersized/supersized.shutter.css' %}" type="text/css">
+<script  type="text/javascript" src="{% static 'Tumainibase/layout/scripts/supersized/supersized.3.2.7.js' %}"></script>
+<script  type="text/javascript" src="{% static 'Tumainibase/layout/scripts/supersized/supersized.shutter.min.js' %}"></script>
+<script  type="text/javascript" src="{% static 'Tumainibase/layout/scripts/supersized/supersized.setup.js' %}"></script>
+<!-- / homepage slider scripts -->
+</head>
+<body>
+<div class="wrapper row1">
+  <header id="header" class="clear">
+    <div id="hgroup">
+    <img src="{% static 'Tumainibase/images/logosacco.png' %}" alt="logo for the sacco"><h1><a href="{%url 'Tumainibase:index' %}">T<span>umaini Sacco</span></a></h1>
+      <h2>A sacco you can trust</h2>
+    </div>
+    <form action="#" method="post">
+      <fieldset>
+        <legend>Search:</legend>
+        <input type="text" value="Search Our Website&hellip;" onFocus="this.value=(this.value=='Search Our Website&hellip;')? '' : this.value ;">
+        <input type="image" src="{% static 'Tumainibase/layout/images/search.gif' %}" id="search" alt="Search">
+      </fieldset>
+    </form>
+    <nav>
+      <ul class="clear">
+        <li class="first active"><a href="{%url 'Tumainibase:index' %}">Home</a></li>
+        <li><a href="{% static 'Tumainibase/pages/style-demo.html' %}">Registration</a></li>
+        <li><a href="{% static 'Tumainibase/pages/full-width.html' %}">Login</a></li>
+        <li><a href="#">Sacco Details</a>
+          <ul>
+            <li><a href="#">About Us </a></li>
+            <li><a href="#">Sacco Investments</a></li>
+            <li><a href="#">Contacts </a></li>
+          </ul>
+        </li>
+      <li><a href="{% static 'Tumainibase/pages/gallery.html' %}">Gallery</a></li>
+      <li><a href="{% static 'Tumainibase/pages/portfolio.html' %}">Portfolio</a></li>
+      </ul>
+    </nav>
+  </header>
+<!-- Footer -->
+<div class="wrapper row4">
+  <div id="footer" class="clear"> 
+    <!-- Section One -->
+    <section class="one_quarter first">
+      <h2 class="title">Contact Details</h2>
+      <p>You can reach us through the following numbers or post a query on our website .</p>
+      <p>Tel: 0715912799<br>
+        Fax: 0732857369<br>
+        Email: <a href="mailto:njerudenis0@gmail.com?Subject=mailfromTumainiSacco">njerudenis0@gmail.com</a></p>
+    </section>
+    <!-- Section Two -->
+    <section class="one_quarter">
+      <h2 class="title">Loans</h2>
+      <nav>
+        <ul>
+          <li class="first">Biashara loan</li>
+          <li>Makeover loan</li>
+          <li>Salary advance</li>
+          <li>Insurance premium finance loan</li>
+          <li>Emergency loan, School fees loan</li>
+        </ul>
+      </nav>
+    </section>
+    <!-- Section Three -->
+    <section class="one_quarter">
+      <h2 class="title">From The Blog</h2>
+      <article>
+        <header>
+          <h2>Blog Post Title</h2>
+          <time datetime="2018-02-01">Thursday, 1<sup>th</sup> Feburuary 2018</time>
+        </header>
+        <p>One of the best sacco's around have very low rates in their loans and savings plan are the best.</p>
+        <p><a href="#">Read More &raquo;</a></p>
+      </article>
+    </section>
+    <!-- Section Four -->
+    <section class="one_quarter">
+      <h2 class="title">Grab Our Newsletter</h2>
+      <form method="post" action="#">
+        <fieldset>
+          <legend>Contact Form:</legend>
+          <label for="nl_name">Name:</label>
+          <input type="text" name="nl_name" id="nl_name" value="">
+          <label for="nl_email">Email:</label>
+          <input type="text" name="nl_email" id="nl_email" value="">
+          <button type="submit" value="submit">Submit</button>
+        </fieldset>
+      </form>
+    </section>
+    <!-- / Section --> 
+  </div>
+</div>
+<!-- Copyright -->
+<div class="wrapper row5">
+  <footer id="copyright" class="clear">
+    <p class="fl_left">Copyright &copy; 2018 - All Rights Reserved - <a href="#">Tumaini @Co</a></p>
+   
+  </footer>
+</div>
+<script>
+$(document).ready(function () {
+    $("#nl_name, #nl_email").defaultvalue("Name", "Email Address");
+});
+</script>
+</body>
+</html>
